@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassificationFragment">
+
+    <EditText
+        android:id="@+id/txtAssetCategory"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Asset Category"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.305" />
+
+    <EditText
+        android:id="@+id/txtAssetSubCategory"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Asset Sub Category"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAssetCategory"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <EditText
+        android:id="@+id/txtBrandCode"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Brand Code"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAssetSubCategory"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <EditText
+        android:id="@+id/txtModelCode"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Model Code"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBrandCode"
+        app:layout_constraintVertical_bias="0.07" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

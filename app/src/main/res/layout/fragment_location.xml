@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocationFragment">
+
+    <EditText
+        android:id="@+id/tvScanLocationBarcode"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Scan Location Barcode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.223" />
+
+    <EditText
+        android:id="@+id/tvSiteName"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Site Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvScanLocationBarcode"
+        app:layout_constraintVertical_bias="0.074" />
+
+    <EditText
+        android:id="@+id/tvBuildingName"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Building Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSiteName"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <EditText
+        android:id="@+id/tvFloorName"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Floor Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBuildingName"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <EditText
+        android:id="@+id/tvRoomName"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Room Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFloorName"
+        app:layout_constraintVertical_bias="0.095" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScanFragment">
+
+
+    <EditText
+        android:id="@+id/txtAssetName"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Asset Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtScanSerial"
+        app:layout_constraintVertical_bias="0.403" />
+
+    <EditText
+        android:id="@+id/txtAssetCode"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Asset Code"
+        app:layout_constraintBottom_toTopOf="@+id/txtAssetName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtScanSerial"
+        app:layout_constraintVertical_bias="0.765" />
+
+    <EditText
+        android:id="@+id/txtProductCode"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Product Code"
+        app:layout_constraintBottom_toTopOf="@+id/txtAssetCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtScanSerial"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <EditText
+        android:id="@+id/txtScanSerial"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:hint="Scan Serial Number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.236" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FAT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello Scan fragment</string>
+    <string name="path">Path</string>
+    <!-- Preference Titles -->
+
+    <!-- Messages Preferences -->
+
+    <!-- Sync Preferences -->
+    <!-- Strings used for fragments for navigation -->
+
+</resources>
