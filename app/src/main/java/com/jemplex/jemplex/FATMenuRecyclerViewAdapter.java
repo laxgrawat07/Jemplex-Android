@@ -9,8 +9,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.jemplex.jemplex.response.AppMenu;
-import com.jemplex.jemplex.response.MyListener;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -21,6 +22,7 @@ public class FATMenuRecyclerViewAdapter extends RecyclerView.Adapter<FATMenuRecy
 
     private final int value;
     private List<String> mValues;
+    private List<Integer> mImages;
 
 
     public interface MyListener {
@@ -30,10 +32,11 @@ public class FATMenuRecyclerViewAdapter extends RecyclerView.Adapter<FATMenuRecy
     MenuViewModel viewModel;
     private MyListener listener;
 
-    public FATMenuRecyclerViewAdapter(ArrayList<String> items, MyListener listener, int value) {
+    public FATMenuRecyclerViewAdapter(ArrayList<String> items, MyListener listener, int value, ArrayList<Integer> parentListImages) {
         mValues = items;
         this.listener = listener;
         this.value = value;
+        this.mImages = parentListImages;
         notifyDataSetChanged();
     }
 
@@ -49,6 +52,12 @@ public class FATMenuRecyclerViewAdapter extends RecyclerView.Adapter<FATMenuRecy
     public void onBindViewHolder(final ViewHolder holder, int position) {
 //        holder.mItem = mValues.get(position);
         holder.txtMenu.setText(mValues.get(position));
+
+        RequestOptions options = new RequestOptions()
+                .placeholder(R.drawable.android)
+                .error(R.drawable.android);
+
+        Glide.with(holder.context).load(mImages.get(position)).apply(options).into(holder.imgMenu);
         //holder.mContentView.setText(mValues.get(position).content);
     }
 

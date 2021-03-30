@@ -21,7 +21,8 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void init() {
-        String BASE_URL = "https://fatwebapi.azurewebsites.net/fat/";
+//        String BASE_URL = "https://fatwebapi.azurewebsites.net:8004/fat/";
+        String BASE_URL = "http://acuberfid.fortiddns.com:8004/";
         SharedPreferences.instance(this);
         SharedPreferences.instance().storeValueString("BASE_URL", BASE_URL);
         final Handler handler = new Handler();
