@@ -7,7 +7,7 @@
     android:name="com.jemplex.jemplex.FATMenuFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
     app:spanCount="2"
     tools:context=".FATMenuFragment"
     tools:listitem="@layout/fragment_fat_menu_item" />

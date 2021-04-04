@@ -12,9 +12,9 @@ import retrofit2.http.POST;
 
 
 public interface FATAPIInterface {
-    @POST("User/authenticate")
+    @POST("fat/User/authenticate")
     Call<Authenticate> authUser(@Body Authenticate user);
 
-    @GET("AppMenu")
+    @GET("fat/AppMenu")
     Call <List<AppMenu>> GetMenu(@Header("Authorization") String Token);
 }
