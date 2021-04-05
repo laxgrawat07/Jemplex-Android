@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:maxLines="2"
-        android:text="REGION SCHOOL"
+        android:text="FAT"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
