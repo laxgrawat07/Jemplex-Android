@@ -33,7 +33,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:maxLines="2"
+<<<<<<< HEAD
         android:text="REGION SCHOOL"
+=======
+        android:text="FAT"
+>>>>>>> c009a9b47588c33fce5c7f9ae6d62937d4d89c3d
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"

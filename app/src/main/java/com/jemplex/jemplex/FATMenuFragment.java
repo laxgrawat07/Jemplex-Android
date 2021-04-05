@@ -73,11 +73,13 @@ public class FATMenuFragment extends Fragment implements MyListener {
         childListImages.add(R.drawable.ic_tags);
 
         for (int i = 0; i < lstMenu.size(); i++) {
-            if (lstMenu.get(i).parentMenuName == null && lstMenu.get(i).applicationID.equals(ApplicationId)) {
-                parentList.add(lstMenu.get(i).menuName);
-            } else if (lstMenu.get(i).parentMenuName != null && lstMenu.get(i).applicationID.equals(ApplicationId)) {
-                childList.add(lstMenu.get(i).menuName);
-                Log.e("###", "childList: " + childList);
+            if (!lstMenu.get(i).isDeleted) {
+                if (lstMenu.get(i).parentMenuName == null && lstMenu.get(i).applicationID.equals(ApplicationId)) {
+                    parentList.add(lstMenu.get(i).menuName);
+                } else if (lstMenu.get(i).parentMenuName != null && lstMenu.get(i).applicationID.equals(ApplicationId)) {
+                    childList.add(lstMenu.get(i).menuName);
+                    Log.e("###", "childList: " + childList);
+                }
             }
         }
         Log.e("###", "parentList: " + parentList);

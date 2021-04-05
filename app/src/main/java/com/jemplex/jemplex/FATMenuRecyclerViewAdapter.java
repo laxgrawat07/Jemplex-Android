@@ -57,6 +57,10 @@ public class FATMenuRecyclerViewAdapter extends RecyclerView.Adapter<FATMenuRecy
                 .placeholder(R.drawable.android)
                 .error(R.drawable.android);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c009a9b47588c33fce5c7f9ae6d62937d4d89c3d
         Glide.with(holder.context).load(mImages.get(position)).apply(options).into(holder.imgMenu);
         //holder.mContentView.setText(mValues.get(position).content);
     }

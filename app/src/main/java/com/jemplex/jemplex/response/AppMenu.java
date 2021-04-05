@@ -27,7 +27,7 @@ public class AppMenu implements Parcelable {
     @SerializedName("sortOrder")
     Integer sortOrder;
     @SerializedName("isDeleted")
-    Boolean isDeleted;
+    public Boolean isDeleted;
     @SerializedName("createdBy")
     String createdBy;
     @SerializedName("createdDate")
