@@ -26,8 +26,8 @@ public class UploadActivity extends AppCompatActivity {
         Toolbar myToolbar = findViewById(R.id.toolbarUpload);
         setSupportActionBar(myToolbar);
         if (savedInstanceState == null) {
-            /*Bundle b = getIntent().getExtras();
-            ArrayList<AppMenu> lstMenu=b.getParcelableArrayList("valuesArray");
+            Bundle b = getIntent().getExtras();
+            ArrayList<AppMenu> lstMenu = (ArrayList<AppMenu>) b.get("valuesArray");
             RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
             // set a LinearLayoutManager with default vertical orientation
             GridLayoutManager linearLayoutManager = new GridLayoutManager(getApplicationContext(),2);
@@ -35,7 +35,7 @@ public class UploadActivity extends AppCompatActivity {
 
             //  call the constructor of CustomAdapter to send the reference and data to Adapter
             ItemUploadAdapter customAdapter = new ItemUploadAdapter(lstMenu);
-            recyclerView.setAdapter(customAdapter);*/
+            recyclerView.setAdapter(customAdapter);
         }
 
     }
@@ -70,6 +70,8 @@ public class UploadActivity extends AppCompatActivity {
         Upload.setVisible(false);
         MenuItem Settings = menu.findItem(R.id.action_settings);
         Settings.setVisible(false);
+        MenuItem Login = menu.findItem(R.id.action_Login);
+        Login.setVisible(false);
         return true;
     }
 }
