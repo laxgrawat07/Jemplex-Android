@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_Upload"
-        android:title="Upload"
         android:layout_height="?attr/actionBarSize"
-        app:showAsAction="never"></item>
+        android:title="@string/upload"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_Download"
-        android:title="Download"
         android:layout_height="?attr/actionBarSize"
-        app:showAsAction="never"></item>
+        android:title="@string/download"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
-        android:title="Setting"
         android:layout_height="?attr/actionBarSize"
-        app:showAsAction="never"></item>
+        android:title="@string/setting"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_LogOut"
-        android:title="Log Out"
         android:layout_height="?attr/actionBarSize"
-        app:showAsAction="never"></item>
+        android:title="@string/log_out"
+        app:showAsAction="never" />
 </menu>

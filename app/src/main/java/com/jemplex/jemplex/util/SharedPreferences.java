@@ -38,6 +38,16 @@ public class SharedPreferences {
         return sharedPref.getString(key, null);
     }
 
+    public void storeValueBoolean(String key, Boolean value) {
+        sharedPrefEditor.putBoolean(key, value);
+        sharedPrefEditor.apply();
+        sharedPrefEditor.commit();
+    }
+
+    public Boolean fetchValueBoolean(String key) {
+        return sharedPref.getBoolean(key, false);
+    }
+
     public void clearValue() {
         sharedPrefEditor.clear();
     }

@@ -1,10 +1,10 @@
 package com.jemplex.jemplex.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.jemplex.jemplex.MainActivity;
 import com.jemplex.jemplex.MenuPageActivity;
@@ -28,7 +28,12 @@ public class SplashActivity extends AppCompatActivity {
         final Handler handler = new Handler();
         handler.postDelayed(() -> {
             //Write whatever to want to do after delay specified (1 sec)
-            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            if (SharedPreferences.instance(this).fetchValueBoolean("IS_LOGIN_TRUE")) {
+                startActivity(new Intent(SplashActivity.this, MenuPageActivity.class));
+            } else {
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            }
+            finish();
         }, 1000);
 
     }

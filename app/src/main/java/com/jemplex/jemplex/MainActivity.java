@@ -3,6 +3,7 @@ package com.jemplex.jemplex;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -15,12 +16,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.jemplex.jemplex.response.AppMenu;
 import com.jemplex.jemplex.response.Authenticate;
 import com.jemplex.jemplex.util.SharedPreferences;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -118,39 +115,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onResponse(Call<Authenticate> call, Response<Authenticate> response) {
                         userDetails = response.body();
+                        assert userDetails != null;
                         if (!userDetails.token.isEmpty()) {
+                            progressDialog.dismiss();
                             strToken = "Bearer" + " " + userDetails.token;
-                            strRole = userDetails.roleName;
-                            if (!userDetails.token.isEmpty()) {
-                                Call<List<AppMenu>> call2 = api.GetMenu(strToken);
-                                call2.enqueue(new Callback<List<AppMenu>>() {
-                                    @Override
-                                    public void onResponse(Call<List<AppMenu>> call, Response<List<AppMenu>> response) {
-                                        progressDialog.dismiss();
-                                        List<AppMenu> lstMenu = response.body();
-//                                        List<AppMenu> Menu = lstMenu.stream()
-//                                                .filter((p) -> p.applicationID.equals(ApplicationId))
-//                                                .collect(Collectors.toList());
+                            SharedPreferences.instance(getApplicationContext());
+                            SharedPreferences.instance().storeValueBoolean("IS_LOGIN_TRUE", true);
+                            SharedPreferences.instance(getApplicationContext()).storeValueString("ACCESS_TOKEN", strToken);
+                            Log.e("###", "strToken" + strToken);
+                            startActivity(new Intent(MainActivity.this, MenuPageActivity.class));
+                            finish();
 
-                                        Intent MenuIntent = new Intent(MainActivity.this, MenuPageActivity.class);
-                                        Bundle bundle = new Bundle();
-                                        ArrayList<AppMenu> arMenu = new ArrayList<>(lstMenu.size());
-                                        arMenu.addAll(lstMenu);
-                                        bundle.putParcelableArrayList("valuesArray", arMenu);
-                                        MenuIntent.putExtras(bundle);
-                                        startActivity(MenuIntent);
-                                    }
 
-                                    @Override
-                                    public void onFailure(Call<List<AppMenu>> call, Throwable t) {
-                                        progressDialog.dismiss();
-                                        call.cancel();
-                                    }
-                                });
-
-                            }
+//                            if (!userDetails.token.isEmpty()) {
+//                                Call<List<AppMenu>> call2 = api.GetMenu(strToken);
+//                                call2.enqueue(new Callback<List<AppMenu>>() {
+//                                    @Override
+//                                    public void onResponse(Call<List<AppMenu>> call, Response<List<AppMenu>> response) {
+//                                        progressDialog.dismiss();
+//                                        List<AppMenu> lstMenu = response.body();
+////                                        List<AppMenu> Menu = lstMenu.stream()
+////                                                .filter((p) -> p.applicationID.equals(ApplicationId))
+////                                                .collect(Collectors.toList());
+//
+//                                        Intent MenuIntent = new Intent(MainActivity.this, MenuPageActivity.class);
+//                                        Bundle bundle = new Bundle();
+//                                        ArrayList<AppMenu> arMenu = new ArrayList<>(lstMenu.size());
+//                                        arMenu.addAll(lstMenu);
+//                                        bundle.putParcelableArrayList("valuesArray", arMenu);
+//                                        MenuIntent.putExtras(bundle);
+//                                        startActivity(MenuIntent);
+//
+//                                    }
+//
+//                                    @Override
+//                                    public void onFailure(Call<List<AppMenu>> call, Throwable t) {
+//                                        progressDialog.dismiss();
+//                                        call.cancel();
+//                                    }
+//                                });
+//
+//                            }
                         } else {
                             Toast.makeText(MainActivity.this, "Error please try after some time!", Toast.LENGTH_LONG).show();
+                            progressDialog.dismiss();
                         }
                     }
 

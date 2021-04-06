@@ -23,7 +23,7 @@ public class UploadActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbarUpload);
+        Toolbar myToolbar = findViewById(R.id.toolbarUpload);
         setSupportActionBar(myToolbar);
         if (savedInstanceState == null) {
             /*Bundle b = getIntent().getExtras();

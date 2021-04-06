@@ -2,7 +2,15 @@
     <string name="app_name">FAT</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello Scan fragment</string>
+
+
+
+
     <string name="path">Path</string>
+    <string name="upload">Upload</string>
+    <string name="download">Download</string>
+    <string name="log_out">Log Out</string>
+    <string name="setting">Setting</string>
     <!-- Preference Titles -->
 
     <!-- Messages Preferences -->

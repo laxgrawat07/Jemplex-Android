@@ -20,37 +20,22 @@ import java.util.ArrayList;
  */
 public class FATMenuFragment extends Fragment implements MyListener {
 
-    // TODO: Customize parameter argument names
-    private static final String ARG_COLUMN_COUNT = "column-count";
-    // TODO: Customize parameters
-    private int mColumnCount = 2;
     ArrayList<String> childList = new ArrayList<>();
     ArrayList<Integer> childListImages = new ArrayList<Integer>();
 
     public static String ApplicationId = "FATMOBILEAPP";
 
-
     public FATMenuFragment() {
     }
 
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
-    public static FATMenuFragment newInstance(int columnCount) {
-        FATMenuFragment fragment = new FATMenuFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
-        fragment.setArguments(args);
-        return fragment;
-    }
+//    public static FATMenuFragment newInstance(int columnCount) {
+//        FATMenuFragment fragment = new FATMenuFragment();
+//        Bundle args = new Bundle();
+//        args.putInt(ARG_COLUMN_COUNT, columnCount);
+//        fragment.setArguments(args);
+//        return fragment;
+//    }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-        }
-    }
 
     RecyclerView recyclerView;
 
@@ -89,7 +74,6 @@ public class FATMenuFragment extends Fragment implements MyListener {
 
     private void callAdapter(ArrayList<String> parentList, ArrayList<Integer> parentListImages, int value) {
         // Set the adapter
-        mColumnCount = 2;
       /*  mColumnCount = 2;
         if (mColumnCount <= 1) {
             recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
