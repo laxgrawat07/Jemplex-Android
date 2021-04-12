@@ -29,52 +29,52 @@
     <!--        tools:itemCount="4"-->
     <!--        tools:listitem="@layout/uplad_item" />-->
 
-    <CheckBox
-        android:id="@+id/receivingCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Receiving"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="@id/directCheckBox"
-        app:layout_constraintTop_toBottomOf="@id/toolbarUpload" />
+<!--    <CheckBox-->
+<!--        android:id="@+id/receivingCheckBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Receiving"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread_inside"-->
+<!--        app:layout_constraintStart_toStartOf="@id/directCheckBox"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/toolbarUpload" />-->
 
-    <CheckBox
-        android:id="@+id/taggingCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:text="Tagging"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/receivingCheckBox"
-        app:layout_constraintStart_toStartOf="@id/executeCheckBox"
-        app:layout_constraintTop_toBottomOf="@id/toolbarUpload"
-        app:layout_constraintTop_toTopOf="@id/receivingCheckBox" />
+<!--    <CheckBox-->
+<!--        android:id="@+id/taggingCheckBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="Tagging"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/receivingCheckBox"-->
+<!--        app:layout_constraintStart_toStartOf="@id/executeCheckBox"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/toolbarUpload"-->
+<!--        app:layout_constraintTop_toTopOf="@id/receivingCheckBox" />-->
 
-    <CheckBox
-        android:id="@+id/directCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Direct Transfer"
-        app:layout_constraintEnd_toStartOf="@+id/executeCheckBox"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/receivingCheckBox" />
+<!--    <CheckBox-->
+<!--        android:id="@+id/directCheckBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Direct Transfer"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/executeCheckBox"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread_inside"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/receivingCheckBox" />-->
 
-    <CheckBox
-        android:id="@+id/executeCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:text="Execute Transfer Request"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/directCheckBox"
-        app:layout_constraintTop_toTopOf="@id/directCheckBox" />
+<!--    <CheckBox-->
+<!--        android:id="@+id/executeCheckBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="Execute Transfer Request"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/directCheckBox"-->
+<!--        app:layout_constraintTop_toTopOf="@id/directCheckBox" />-->
 
     <Button
         android:id="@+id/btnDownload"
