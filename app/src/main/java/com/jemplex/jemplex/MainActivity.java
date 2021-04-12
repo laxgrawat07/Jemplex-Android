@@ -99,6 +99,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Upload.setVisible(true);
         MenuItem Settings = menu.findItem(R.id.action_settings);
         Settings.setVisible(true);
+        MenuItem Login = menu.findItem(R.id.action_Login);
+        Login.setVisible(false);
         return true;
     }
 

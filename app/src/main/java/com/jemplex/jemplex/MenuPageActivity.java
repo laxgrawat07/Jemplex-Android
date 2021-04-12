@@ -122,6 +122,8 @@ public class MenuPageActivity extends AppCompatActivity {
         Upload.setVisible(true);
         MenuItem Settings = menu.findItem(R.id.action_settings);
         Settings.setVisible(false);
+        MenuItem Login = menu.findItem(R.id.action_Login);
+        Login.setVisible(false);
         return true;
     }
 

@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -49,11 +50,18 @@ public class SettingPage extends AppCompatActivity implements View.OnClickListen
             startActivity(PageIntent);
             return true;
         }
+        if (item.getItemId() == R.id.action_Login) {
+            PageIntent = new Intent(SettingPage.this, MainActivity.class);
+            startActivity(PageIntent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem Login = menu.findItem(R.id.action_Login);
+        Login.setVisible(true);
         MenuItem Download = menu.findItem(R.id.action_Download);
         Download.setVisible(true);
         MenuItem LogOut = menu.findItem(R.id.action_LogOut);
@@ -69,8 +77,15 @@ public class SettingPage extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btnSave) {
-            SharedPreferences.instance().storeValueString("BASE_URL", baseUrlText.getText().toString());
-            Log.e("###", "BASE_URL1: " + (SharedPreferences.instance().fetchValueString("BASE_URL")));
+            if (!baseUrlText.getText().toString().matches("")) {
+                SharedPreferences.instance().storeValueString("BASE_URL", baseUrlText.getText().toString());
+                Toast.makeText(getApplicationContext(), "Path saved successfully.", Toast.LENGTH_SHORT).show();
+                baseUrlText.setText("");
+                Log.e("###", "BASE_URL1: " + (SharedPreferences.instance().fetchValueString("BASE_URL")));
+            }
+            else
+                Toast.makeText(getApplicationContext(), "Please enter some value.", Toast.LENGTH_LONG).show();
+
         }
     }
 }

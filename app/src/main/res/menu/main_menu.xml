@@ -21,4 +21,9 @@
         android:layout_height="?attr/actionBarSize"
         android:title="@string/log_out"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Login"
+        android:layout_height="?attr/actionBarSize"
+        android:title="@string/login"
+        app:showAsAction="never" />
 </menu>
